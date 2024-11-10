@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+nav{
+    height: 12vh;
+    /* background-color: rgb(133, 173, 53); */
+    position: fixed;
+    background-color: #111111; 
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 2vw 10.5vw;
+    justify-content: space-between;
+    z-index: 10;
+}
+nav .nav-option {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    gap: 2vw;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+
+}
+nav .nav-option h4{
+    font-size: .7vw;
+    font-weight: 600;
+    margin-bottom: 2vw;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+}
+.nav-elem h5{
+    margin-bottom: 1vw;
+    display: none;
+    overflow: hidden;
+}
+.nav-elem h5 span{
+font-size: 0.68vw;
+font-weight: 400;
+display: inline-block;
+/* margin-bottom: 1vw; */
+}
+nav .nav-option h4:hover{
+    /* font-weight: bolder; */
+    color: rgb(168, 166, 166);
+    cursor: pointer;
+}
+nav .nav-elem h5:hover{
+    /* font-weight: bolder; */
+    color: rgb(168, 166, 166);
+    cursor: pointer;
+}
+nav .nav-btn button{
+    color: white;
+    background: #0DA34E;
+    font-size: 1.2vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px    
+}
+.nav-btn button svg{
+    height: 1vw;
+    margin-left: 7px;
+}
+.nav-btn:hover button{
+    background-color: #0b8b42;
+}
+.bottom-nav{
+    height: 0;
+    width: 80%;
+    position: absolute;
+    top: 100%;
+    background-color:#111111;
+    z-index: 9;
+    border-bottom: 1px solid whitesmoke;
+    opacity: .95;
+}
+
+
+/* nav:hover .bottom-nav{
+    height: 150%;
+    bottom: -150%;
+    background-color: #111111;
+    opacity: .8;
+}
+.bottom-nav{
+    height: 00%;
+    width: 80%;   
+    position: absolute;
+    bottom: 0%;
+    border-bottom: 1px solid #dadada;
+    transition:all 1s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2vw 15vw;
+    padding-left: 20vw;
+    gap: 2.5vw;    
+}
+.bottom-nav-text h4{
+    margin-bottom: 0.4vw;
+}
+.bottom-nav-text h4 span{
+    font-size: .68vw;
+    display: inline-block;
+    font-weight: 200;    
+    opacity: 0;
+} */
+
+.page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #111111; 
+    color: white;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.page1 h1{
+    font-size: 7.5vw;    
+    text-transform: uppercase;
+    /* font-size: 35px; */
+    font-weight: 900;
+   
+    line-height: 16vh;
+}
+.page1 h1 span{
+    width: 5vw;
+    height: 5vw;    
+    /* background-color: #0DA34E; */
+    /* border-radius: 50%; */
+}
+.page1 h1 svg{
+    /* width: 7vw; */
+    /* height: 7vw; */
+    /* padding: 8px; */
+    /* margin-bottom: 4px; */
+    width: inherit;
+    height: inherit;
+    background-color: #0DA34E;
+    border-radius: 50%;
+}
+.page1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 3.5vh;
+}
+.page1-text{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* column-gap: 4px; */
+}
+.page1 h4{
+    font-size: 1vw;
+    font-weight: 300;
+    border: 1px solid #efeded;
+    margin-top: 2px;
+    border-radius: 50px;
+    /* text-align: center; */
+    padding: 5px 10px;
+    text-transform: lowercase;
+}
+.page1-text h4:nth-last-child(2){
+    border: none;
+    padding: 5px;
+}
+.moving-div{
+    margin-top: 10vh;
+    position: absolute;
+    white-space: nowrap;
+    padding: 1.4vw;
+    overflow: hidden;
+    bottom:5%;
+    width: 43%;
+    /* display: flex; */
+    /* z-index: 9; */
+}
+.move{
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation: move 6s linear infinite; */
+}
+.moving-div .move img{
+    height: 1vw;
+    margin: 0 1vw;
+}
+
+@keyframes move{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.blur-left{
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right , #111 ,transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.blur-right{
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right , transparent , #111);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+
+.page2{
+    height: 100vh;
+    width: 100vw;
+    background-color: #111111;
+}
+
