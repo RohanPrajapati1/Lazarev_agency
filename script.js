@@ -39,5 +39,31 @@ nav.addEventListener("mouseleave" , function() {
     })
 })
 }
-
 navAnimation();
+
+
+function page2_Animation(){    
+let right_element = document.querySelectorAll(".page2-right-text");
+right_element.forEach(function(e){
+     e.addEventListener("mouseenter", ()=>{
+        gsap.to(e.childNodes[3],{
+            opacity:1,
+            scale:1
+        })
+     })
+     e.addEventListener("mouseleave", ()=>{
+        gsap.to(e.childNodes[3],{
+            opacity:0,
+            scale:0
+        })
+     })
+     e.addEventListener("mousemove", (deatails)=>{
+        gsap.to(e.childNodes[3],{
+            x:deatails.x - e.getBoundingClientRect().x - 380,
+            y:deatails.y - e.getBoundingClientRect().y -55
+        })
+        
+     })
+})
+}
+page2_Animation();

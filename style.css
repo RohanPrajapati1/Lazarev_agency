@@ -239,7 +239,7 @@ nav .nav-btn button{
     background-color: #111111;
     position: relative;
     padding: 2vw 10.5vw;
-    padding-bottom: 8vw;
+    padding-bottom: 4vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -255,7 +255,7 @@ nav .nav-btn button{
     justify-content: space-around;
     font-size: 1vw;
     font-weight: 200;
-    color: white;
+    color: rgb(168, 167, 167);
 }
 .page2-right-content{
     /* background-color: rgb(106, 107, 107); */
@@ -264,11 +264,39 @@ nav .nav-btn button{
     display: grid;
     grid-template-rows: repeat(4, 1fr);
 }
+.page2-right-content:hover{
+    cursor:default;
+}
 .page2-right-text{
     /* background-color: #fff; */
     color: white;
-    border-top: 1px solid #333;
-    padding-top: 20px ;
+    border-bottom: 1px solid #333;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.page2-right-text img{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0;
+    scale: 0;
+}
+.page2-right-text .div {
+    /* background-color: #0b8b42; */
+    width: 5vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.page2-right-text .div svg{
+    width: 8px;
+    height: 8px;
+}
+.page2-right-text .div h6{
+    font-size: .6vw;
+    color: gray;
 }
 .page2-right-text h4{
     font-size: 1.2vw;
