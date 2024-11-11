@@ -6,10 +6,12 @@ nav.addEventListener("mouseenter" , function() {
     let tl = gsap.timeline();
 
     tl.to("#bottom-nav" , {
-        height:"200%"
+        height:"200%",
+        duration:0.5
     })
     tl.to(".nav-option h5" , {
-        display: "block"
+        display: "block",
+        duration:0.1
     })
     tl.from(".nav-option h5 span" , {
         y:25,
@@ -39,8 +41,6 @@ nav.addEventListener("mouseleave" , function() {
     })
 })
 }
-navAnimation();
-
 
 function page2_Animation(){    
 let right_element = document.querySelectorAll(".page2-right-text");
@@ -66,4 +66,29 @@ right_element.forEach(function(e){
      })
 })
 }
-page2_Animation();
+
+function videoAnimation(){
+let video_btn = document.querySelector(".video-btn");
+let video = document.querySelector(".page3 video");
+
+video_btn.addEventListener("click" , ()=>{
+    video.play();
+    gsap.to(video , {
+        transform:"scaleX(1) scaleY(1)",
+        opacity:1,
+        borderRadius:0
+    })
+})
+video.addEventListener("click" , ()=> {
+    video.pause();
+    gsap.to(video , {
+        transform:"scaleX(0.7) scaleY(0) ",
+        opacity:0,
+        borderRadius:"30px"
+    })
+})
+}
+
+// page2_Animation();
+// navAnimation();
+// videoAnimation();
