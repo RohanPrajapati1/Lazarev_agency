@@ -92,3 +92,22 @@ video.addEventListener("click" , ()=> {
 // page2_Animation();
 // navAnimation();
 // videoAnimation();
+
+
+let page4 = document.querySelectorAll(".right-sec");
+
+page4.forEach((elem)=>{
+    //  console.log(elem.childNodes);
+     elem.addEventListener("mouseenter",()=>{
+        // console.log(elem.childNodes[3]);
+        elem.childNodes[3].play();
+        elem.childNodes[3].style.opacity = 1;
+        
+     })
+     elem.addEventListener("mouseleave",()=>{
+        // console.log(elem.childNodes[3]);
+        elem.childNodes[3].pause();
+        elem.childNodes[3].style.opacity = 0;
+        
+     })
+})
