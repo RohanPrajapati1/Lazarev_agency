@@ -89,25 +89,38 @@ video.addEventListener("click" , ()=> {
 })
 }
 
+function page5_video_animation(){    
+    let page4 = document.querySelectorAll(".right-sec");
+    // console.log(page4[0].childNodes);
+    page4.forEach((elem)=>{
+        //  console.log(elem);
+         elem.addEventListener("mouseenter",()=>{
+            // console.log(elem.childNodes[3]);
+            elem.childNodes[5].play();
+            elem.childNodes[5].style.opacity = 1;
+            
+         })
+         elem.addEventListener("mouseleave",()=>{
+            // console.log(elem.childNodes[3]);
+            elem.childNodes[5].load();
+            elem.childNodes[5].style.opacity = 0;
+            elem.childNodes[1].style.opacity = 0;
+            
+         })
+         elem.addEventListener("mousemove", (deatails)=>{
+            elem.childNodes[1].style.opacity = 1;
+            gsap.to(elem.childNodes[1],{                
+                x:deatails.x - elem.getBoundingClientRect().x - 70,
+                y:deatails.y - elem.getBoundingClientRect().y -70
+            })
+            
+         })
+    })
+}
+
 // page2_Animation();
 // navAnimation();
 // videoAnimation();
+page5_video_animation();
 
 
-let page4 = document.querySelectorAll(".right-sec");
-
-page4.forEach((elem)=>{
-    //  console.log(elem.childNodes);
-     elem.addEventListener("mouseenter",()=>{
-        // console.log(elem.childNodes[3]);
-        elem.childNodes[3].play();
-        elem.childNodes[3].style.opacity = 1;
-        
-     })
-     elem.addEventListener("mouseleave",()=>{
-        // console.log(elem.childNodes[3]);
-        elem.childNodes[3].pause();
-        elem.childNodes[3].style.opacity = 0;
-        
-     })
-})

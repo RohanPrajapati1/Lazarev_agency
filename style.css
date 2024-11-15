@@ -489,6 +489,23 @@ nav .nav-btn button{
     /* background-color: rgb(40, 146, 110); */
     position: relative;
 }
+ .page5 .right-sec .circle{
+    color: white;
+    font-weight: 600;
+    background-color: #4F5BFF;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    padding-left: 13px;
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: 100;
+    transition: all ease-in 0.5;
+} 
 .right-sec img{
     width: 100%;
     height: 100%;
@@ -503,6 +520,7 @@ nav .nav-btn button{
     left: 0;
     object-fit: cover;
     opacity: 0;
+    transition: all ease 0.5s;
 }
 
 
