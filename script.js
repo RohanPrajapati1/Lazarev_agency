@@ -118,9 +118,9 @@ function page5_video_animation(){
     })
 }
 
-// page2_Animation();
-// navAnimation();
-// videoAnimation();
+page2_Animation();
+navAnimation();
+videoAnimation();
 page5_video_animation();
 
 
